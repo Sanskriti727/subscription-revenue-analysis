@@ -1,0 +1,104 @@
+
+╔══════════════════════════════════════════════════════════════════╗
+║         SUBSCRIPTION REVENUE ANALYSIS — FINAL REPORT            ║
+║                  CloudSub Inc. | 2022–2023                       ║
+╚══════════════════════════════════════════════════════════════════╝
+
+BUSINESS PROBLEM
+─────────────────
+CloudSub Inc. experienced slowing revenue growth despite steady new 
+customer acquisition. This analysis investigated churn patterns, 
+revenue leakage, and customer lifetime value across all plan types 
+to identify the root cause and recommend corrective actions.
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+FINDING 1 — Basic Plan Churn is Destroying Revenue
+────────────────────────────────────────────────────
+- Basic plan customers churn at 94.59% vs 10.97% for Enterprise
+- Basic customers only stay for an average of 7.6 months
+- Their CLV is only $221 vs $4,977 for Enterprise customers
+- Despite being 50% of the customer base, Basic contributes 
+  the least retained revenue ($1,566 active MRR remaining)
+
+RECOMMENDATION:
+→ Introduce a mid-tier plan between Basic and Pro to give 
+  Basic customers a natural upgrade path
+→ At month 3 (peak churn window), trigger an automated 
+  upgrade offer with 20% discount for first 3 months
+→ Expected impact: 15% reduction in Basic churn = 
+  ~$4,100 additional MRR retained per month
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+FINDING 2 — Failed Payments Are a Major Churn Signal
+──────────────────────────────────────────────────────
+- 59.58% of all churned customers had a failed payment 
+  in the 30 days before they cancelled
+- This means churn was PREDICTABLE for 6 in 10 customers
+- The company had a 30-day window to intervene but had 
+  no automated system in place
+
+RECOMMENDATION:
+→ Implement an automated dunning (payment recovery) system:
+   Day 1: Automated email — payment failed, retry link
+   Day 3: SMS reminder with direct payment update link
+   Day 7: Account pause warning with support chat offer
+   Day 14: Final notice before cancellation
+→ Industry benchmark: dunning systems recover 20-30% 
+  of at-risk accounts
+→ Expected impact: Recovering 20% of 488 at-risk customers 
+  = ~98 customers saved per cycle
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+FINDING 3 — Enterprise Customers Are Carrying the Business
+────────────────────────────────────────────────────────────
+- Enterprise has only 10.97% churn vs 94.59% for Basic
+- Enterprise CLV ($4,977) is 22x higher than Basic ($221)
+- Enterprise active MRR ($113,316) dwarfs all other segments
+- Only 319 Enterprise customers generate more revenue than 
+  999 Basic + 682 Pro customers combined
+
+RECOMMENDATION:
+→ Shift acquisition budget toward Enterprise segment
+→ Create a dedicated Customer Success Manager role for 
+  Enterprise accounts to keep churn below 5%
+→ Build an Enterprise referral program — a single 
+  Enterprise referral is worth 22 Basic customers
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+FINDING 4 — Churn is Accelerating Over Time
+─────────────────────────────────────────────
+- Churn rate grew from 0.05% in Jan 2022 to 3.3% by Sep 2023
+- That is a 66x increase in churn over 18 months
+- Early cohorts (2022) lose 50% of customers within 12 months
+- This trend will continue to worsen without intervention
+
+RECOMMENDATION:
+→ Set a company-wide churn KPI target of below 2% monthly
+→ Build a real-time churn monitoring dashboard (like this one)
+  reviewed in weekly leadership meetings
+→ Conduct exit surveys for all churned customers to capture 
+  qualitative reasons beyond payment failure
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+SUMMARY OF IMPACT IF RECOMMENDATIONS ARE IMPLEMENTED
+──────────────────────────────────────────────────────
+- Total revenue currently lost to churn:         $75,426
+- Estimated recovery with dunning system:    ~$15,000/month
+- Estimated saving by reducing Basic churn:   ~$4,100/month
+- Total estimated monthly revenue recovery:  ~$19,100/month
+- Annualized impact:                        ~$229,200/year
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+TOOLS USED
+───────────
+- Database : MySQL (data storage & SQL analysis)
+- Language : Python (Pandas, Matplotlib, Seaborn, Plotly)
+- Notebook : Jupyter Notebook
+- Dashboard: Plotly Interactive HTML Dashboard
+
